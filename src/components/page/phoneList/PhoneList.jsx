@@ -1,4 +1,5 @@
 import {
+    Button,
   H2,
   H4,
   H5,
@@ -23,6 +24,7 @@ const PhoneList = ({ phones }) => {
             <H2>{name}</H2>
             <H4>Brand: {brand}</H4>
             <H5>Price: {price}</H5>
+            <Button>View Details</Button>
           </MobileCard>
         );
       })}
