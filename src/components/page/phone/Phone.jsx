@@ -22,7 +22,9 @@ const Phone = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:5000/phones");
+        const response = await fetch(
+          "https://mobile-ordering-app-backend-pu2yj6ph1-alif819015.vercel.app/phones"
+        );
         const data = await response.json();
         setPhones(data);
         setVisiblePhones(data.slice(0, 8));
@@ -78,6 +80,11 @@ const Phone = () => {
     setShowAll(true);
   };
 
+  const handlePhoneClick = (phone) => {
+    setSelectedPhone(phone);
+    history.push(`/details/${phone.id}`);
+  };
+
   useEffect(() => {
     applyFilters();
   }, [searchFilters]);
@@ -88,7 +95,10 @@ const Phone = () => {
       {selectedPhone ? (
         <PhoneDetails phone={selectedPhone} />
       ) : (
-        <PhoneList phones={showAll ? phones : visiblePhones} />
+        <PhoneList
+          phones={showAll ? phones : visiblePhones}
+          onViewDetails={handlePhoneClick}
+        />
       )}
       {!showAll && (
         <ViewAllButton onClick={handleViewAll}>View All</ViewAllButton>

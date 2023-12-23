@@ -1,16 +1,36 @@
 import React from "react";
-import { MobileDetailsContainer } from "./PhoneDetails.style";
-import { H3, H5, Img } from "../../phoneList/PhoneList.style";
+import {
+  BuyNowButton,
+  CardActions,
+  CardBody,
+  CardImage,
+  CardText,
+  CardTitle,
+  StyledCard,
+} from "./PhoneDetails.style";
+import { useLoaderData } from "react-router-dom";
 
-const PhoneDetails = ({ phone }) => {
-  const { image, name, price, processor } = phone;
+const PhoneDetails = () => {
+  // const { image, name, price, processor } = phone;
+  const phone = useLoaderData();
+  const { brand, image, name, price, processor } = phone;
   return (
-    <MobileDetailsContainer>
-      <Img src={image} alt="Alt Text" />
-      <H3>{name}</H3>
-      <H5>Processor: {processor}</H5>
-      <H5>Price: ${price}</H5>
-    </MobileDetailsContainer>
+    <StyledCard>
+      <CardImage
+        src={image}
+        alt="Shoes"
+      />
+      <CardBody>
+        <CardTitle>{name}</CardTitle>
+        <CardText>Brand: {brand}</CardText>
+        <CardText>Processor: {processor}</CardText>
+        <CardText>Brand: {brand}</CardText>
+        <CardText>Price: {price}</CardText>
+        <CardActions>
+          <BuyNowButton>Buy Now</BuyNowButton>
+        </CardActions>
+      </CardBody>
+    </StyledCard>
   );
 };
 

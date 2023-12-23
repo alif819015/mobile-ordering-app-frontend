@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const SearchContainer = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export const SearchInput = styled.input`
 
 export const SearchButton = styled.button`
   padding: 8px 16px;
-  background-color: #4caf50;
+  background-color: #810d68;
   color: white;
   border: none;
   border-radius: 4px;
