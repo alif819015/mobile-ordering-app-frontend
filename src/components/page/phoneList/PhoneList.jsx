@@ -1,6 +1,6 @@
 import {
-    Button,
-  H2,
+  Button,
+  H3,
   H4,
   H5,
   Img,
@@ -21,7 +21,7 @@ const PhoneList = ({ phones }) => {
         return (
           <MobileCard key={id}>
             <Img src={image} alt="Alt Text" />
-            <H2>{name}</H2>
+            <H3>{name}</H3>
             <H4>Brand: {brand}</H4>
             <H5>Price: {price}</H5>
             <Button>View Details</Button>

@@ -6,6 +6,8 @@ import {
   SliderButton,
   SliderContainer,
 } from "./Slider.style";
+import { FaAnglesLeft, FaAnglesRight } from "react-icons/fa6";
+
 const slides = [
     "https://i.ibb.co/WGfV09q/Co5.jpg",
     "https://i.ibb.co/GQhrqBK/0-Zcqt-Qi-ROn-LIxn-Le.png",
@@ -27,7 +29,7 @@ const Slider = () => {
   return (
     <SliderContainer>
       <SliderButton direction="prev" onClick={prevSlide}>
-        Prev
+        <FaAnglesLeft />
       </SliderButton>
       <SlideWrapper
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -39,7 +41,7 @@ const Slider = () => {
         ))}
       </SlideWrapper>
       <SliderButton direction="next" onClick={nextSlide}>
-        Next
+        <FaAnglesRight />
       </SliderButton>
     </SliderContainer>
   );

@@ -6,7 +6,7 @@ export const SliderContainer = styled.div`
   border: 1px solid #360ad7;
   border-radius: 8px;
   width: 100%;
-  max-width: 900px; 
+  max-width: 900px;
   margin: 30px auto;
 `;
 
@@ -21,16 +21,16 @@ export const Slide = styled.div`
 `;
 
 export const SliderButton = styled.button`
-  background-color: #590b96;
   color: white;
+  background-color: transparent;
   border: none;
-  border-radius: 5px;
-  font-size: 16px;
+  font-size: 40px;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  ${(props) => (props.direction === "next" ? "right: 10px;" : "left: 10px;")}
+  ${(props) => (props.direction === "next" ? "right: 10px;" : "left: 10px;")};
+  z-index: 1;
 `;
 export const Image = styled.img`
   width: 100%;
