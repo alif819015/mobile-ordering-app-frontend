@@ -1,8 +1,14 @@
-body{
-    font-family: 'Raleway', sans-serif;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(97, 6, 77, 0.568)), url('../public/bacground.jpg');
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(97, 6, 77, 0.568));
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

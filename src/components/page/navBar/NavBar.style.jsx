@@ -1,12 +1,15 @@
 import styled from "styled-components";
 
 export const NavbarContainer = styled.nav`
-  padding: 10px;
+  padding: 10px 20px;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: 320px) {
+    margin-top: 20px;
+  }
   @media (max-width: 600px) {
     flex-direction: column;
     align-items: flex-start;

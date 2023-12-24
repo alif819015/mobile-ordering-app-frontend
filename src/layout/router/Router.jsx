@@ -2,11 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../../components/page/main/Main";
 import Home from "../../components/page/home/Home";
 import PhoneDetails from "../../components/page/phone/phoneDetails/PhoneDetails";
+import Error from "../../components/page/error/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
@@ -17,7 +19,7 @@ const router = createBrowserRouter([
         element: <PhoneDetails />,
         loader: ({ params }) =>
           fetch(
-            `https://mobile-ordering-app-backend-pu2yj6ph1-alif819015.vercel.app/phones/${params.id}`
+            `https://mobile-ordering-app-backend.vercel.app/phones/${params.id}`
           ),
       },
     ],

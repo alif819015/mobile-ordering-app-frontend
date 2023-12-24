@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import {
   Button,
+  DetailsLink,
   H3,
   H4,
   H5,
@@ -8,16 +8,8 @@ import {
   MobileCard,
   MobileListContainer,
 } from "./PhoneList.style";
-// import { useState } from "react";
 
 const PhoneList = ({ phones }) => {
-  // const [phones, setPhones] = useState([]);
-  // useEffect(() => {
-  //   fetch("https://mobile-ordering-app-backend-pu2yj6ph1-alif819015.vercel.app/phones")
-  //     .then((res) => res.json())
-  //     .then((data) => setPhones(data));
-  // }, []);
-
   return (
     <MobileListContainer>
       {phones.map((phone) => {
@@ -29,9 +21,10 @@ const PhoneList = ({ phones }) => {
             <H3>{name}</H3>
             <H4>Brand: {brand}</H4>
             <H5>Price: {price}</H5>
-
             <Button>
-              <Link to={`/details/${phone.id}`}>View Details</Link>
+              <DetailsLink to={`/details/${phone.id}`}>
+                View Details
+              </DetailsLink>
             </Button>
           </MobileCard>
         );

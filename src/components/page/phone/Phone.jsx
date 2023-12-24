@@ -23,8 +23,13 @@ const Phone = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://mobile-ordering-app-backend-pu2yj6ph1-alif819015.vercel.app/phones"
+          "https://mobile-ordering-app-backend.vercel.app/phones"
         );
+
+        if (!response.ok) {
+          throw new Error(`Failed to fetch data. Status: ${response.status}`);
+        }
+
         const data = await response.json();
         setPhones(data);
         setVisiblePhones(data.slice(0, 8));

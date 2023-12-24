@@ -3,7 +3,7 @@ import { Logo, NavLink, NavLinks, NavbarContainer } from "./NavBar.style";
 const NavBar = () => {
   return (
     <NavbarContainer>
-      <Logo>Dev Town</Logo>
+      <Logo>Mobile Store</Logo>
       <NavLinks>
         <NavLink>Home</NavLink>
         <NavLink>About</NavLink>

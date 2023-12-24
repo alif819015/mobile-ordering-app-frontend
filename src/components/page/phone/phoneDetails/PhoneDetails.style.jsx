@@ -10,14 +10,38 @@ export const StyledCard = styled.div`
   margin: 40px auto;
   transition: transform 0.3s ease-in-out;
 
+  @media (max-width: 320px) {
+    width: 90%;
+  }
+
+  @media (min-width: 321px) and (max-width: 576px) {
+    width: 90%;
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media (min-width: 769px) and (max-width: 992px) {
+    width: 70%;
+  }
+
+  @media (min-width: 993px) and (max-width: 1200px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1201px) {
+    width: 60%;
+  }
+
   &:hover {
     transform: scale(1.05);
   }
 `;
 
 export const CardImage = styled.img`
-  width: 200px;
-  height: 250px;
+  width: 100%;
+  height: auto;
   display: block;
   margin: 10px auto;
 `;
@@ -33,7 +57,7 @@ export const CardTitle = styled.h2`
 `;
 
 export const CardText = styled.p`
-  font-size: .90rem;
+  font-size: 0.9rem;
   color: #555555;
   margin-bottom: 1rem;
 `;
